@@ -72,6 +72,7 @@
     <Folder Include="dbo\User Defined Types\" />
     <Folder Include="Security\" />
     <Folder Include="SalesLT\Sequences\" />
+    <Folder Include="Zadania" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\BuildVersion.sql" />
@@ -106,5 +107,7 @@
     <Build Include="Security\SalesLT.sql" />
     <Build Include="Security\Student_189.sql" />
     <Build Include="SalesLT\Sequences\SalesOrderNumber.sql" />
+    <Build Include="Zadania\lab-1.sql" />
+    <Build Include="Zadania\lab-2.sql" />
   </ItemGroup>
 </Project>
