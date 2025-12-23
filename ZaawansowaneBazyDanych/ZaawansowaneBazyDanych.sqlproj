@@ -73,6 +73,7 @@
     <Folder Include="Security\" />
     <Folder Include="SalesLT\Sequences\" />
     <Folder Include="Zadania" />
+    <Folder Include="dbo\XMLSchemaCollections\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\BuildVersion.sql" />
@@ -107,7 +108,11 @@
     <Build Include="Security\SalesLT.sql" />
     <Build Include="Security\Student_189.sql" />
     <Build Include="SalesLT\Sequences\SalesOrderNumber.sql" />
-    <Build Include="Zadania\lab-1.sql" />
-    <Build Include="Zadania\lab-2.sql" />
+    <None Include="Zadania\lab-1.sql" />
+    <None Include="Zadania\lab-2.sql" />
+    <None Include="Zadania\lab-3.sql" />
+    <Build Include="SalesLT\Tables\ProductAttribute.sql" />
+    <Build Include="234189\Tables\CustomerHistory.sql" />
+    <Build Include="dbo\XMLSchemaCollections\ProductAttributesSchema.sql" />
   </ItemGroup>
 </Project>
