@@ -74,6 +74,10 @@
     <Folder Include="SalesLT\Sequences\" />
     <Folder Include="Zadania" />
     <Folder Include="dbo\XMLSchemaCollections\" />
+    <Folder Include="Student_9\" />
+    <Folder Include="Student_9\Tables\" />
+    <Folder Include="Student_9\Views\" />
+    <Folder Include="Student_9\Functions\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\BuildVersion.sql" />
@@ -114,5 +118,16 @@
     <Build Include="SalesLT\Tables\ProductAttribute.sql" />
     <Build Include="234189\Tables\CustomerHistory.sql" />
     <Build Include="dbo\XMLSchemaCollections\ProductAttributesSchema.sql" />
+    <None Include="Zadania\lab-4.sql" />
+    <Build Include="Student_9\Tables\Wizyty.sql" />
+    <Build Include="Student_9\Views\TheBestCustomers.sql" />
+    <Build Include="Student_9\Views\v_IlosciWizytWSpecjalizacjach.sql" />
+    <Build Include="Student_9\Functions\ufn_IsPriceHigherThanCurrent.sql" />
+    <Build Include="Student_9\Functions\ufn_ProductsJsonByCategory.sql" />
+    <Build Include="Student_9\Functions\ufn_ObliczRabat.sql" />
+    <Build Include="Student_9\Functions\ufn_WyszukajWizytyDanejSpecjalizacjiDanegoPacjentaEkstra.sql" />
+    <Build Include="Student_9\Functions\ufn_GetProductsWithHigherUpdatedPrice.sql" />
+    <Build Include="Student_9\Functions\ufn_WyszukajWizytyDanejSpecjalizacjiDanegoPacjenta.sql" />
+    <Build Include="Security\Student_9.sql" />
   </ItemGroup>
 </Project>
