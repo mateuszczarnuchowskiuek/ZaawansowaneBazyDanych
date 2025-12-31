@@ -215,10 +215,10 @@ GO
 -- =============================================
 
 -- SCENARIUSZ DLA iTVF:
--- Mamy tabele zawierajaca dane wszystkich wizyt wszystkich pacjentow prywatnej kliniki.
--- Chcemy zwrocic liste wszystkich wizyt danego pacjenta w charakterze danej
--- specjalizacji, poniewaz pacjent ma w panelu pacjenta na naszej stronie internetowej
--- wyszukiwarke swoich wizyt i moze je wyszukiwac po specjalizacji lekarskiej wizyty.
+-- Mamy tabelę zawierającą dane wszystkich wizyt wszystkich pacjentów prywatnej kliniki.
+-- Chcemy zwrócić listę wszystkich wizyt danego pacjenta w charakterze danej
+-- specjalizacji, ponieważ pacjent ma w panelu pacjenta na naszej stronie internetowej
+-- wyszukiwarkę swoich wizyt i może je wyszukiwać po specjalizacji lekarskiej wizyty.
 
 -- Przygotowanie tabeli do scenariusza:
 CREATE TABLE Student_9.Wizyty
@@ -231,7 +231,7 @@ CREATE TABLE Student_9.Wizyty
 
 GO
 
--- Wprowadzenie przykladowych danych do tabeli ze scenariusza:
+-- Wprowadzenie przykładowych danych do tabeli ze scenariusza:
 INSERT INTO Student_9.Wizyty (IdWizyty, NumerKartyPacjenta, IdLekarza, SpecjalizacjaWizyty)
 VALUES
 (1, 101, 201, N'alergologia'),
@@ -257,7 +257,7 @@ VALUES
 
 GO
 
--- Rozwiazanie dla scenariusza:
+-- Rozwiązanie dla scenariusza:
 
 CREATE FUNCTION Student_9.ufn_WyszukajWizytyDanejSpecjalizacjiDanegoPacjenta
 (
@@ -274,22 +274,22 @@ RETURN
 
 GO
 
--- Wywolanie rozwiazania:
+-- Wywołanie rozwiązania:
 
 SELECT * FROM Student_9.ufn_WyszukajWizytyDanejSpecjalizacjiDanegoPacjenta(101,N'alergologia');
 
 GO
 
 -- SCENARIUSZ DLA mTVF:
--- Podobnie jak wyzej mamy tabele zawierajaca dane wszystkich wizyt wszystkich
--- pacjentow prywatnej kliniki i chcemy zwrocic liste wszystkich wizyt danego
+-- Podobnie jak wyżej mamy tabelę zawierającą dane wszystkich wizyt wszystkich
+-- pacjentów prywatnej kliniki i chcemy zwrócić listę wszystkich wizyt danego
 -- pacjenta w charakterze danej specjalizacji lekarskiej na potrzeby wyszukiwarki
--- w panelu pacjenta na naszej stronie internetowej, ale tym razem chcemy umozliwic wybranie
+-- w panelu pacjenta na naszej stronie internetowej, ale tym razem chcemy umożliwić wybranie
 -- specjalizacji 'dowolna' w przypadku, kiedy specjalizacja nie ma znaczenia.
 
--- Tabele z przykladowymi danymi mamy juz gotowa
+-- Tabelę z przykładowymi danymi mamy już gotową
 
--- Rozwiazanie dla scenariusza:
+-- Rozwiązanie dla scenariusza:
 
 CREATE FUNCTION Student_9.ufn_WyszukajWizytyDanejSpecjalizacjiDanegoPacjentaEkstra
 (
@@ -322,22 +322,22 @@ END
 
 GO
 
--- Wywolanie rozwiazania:
+-- Wywołanie rozwiązania:
 
 SELECT * FROM Student_9.ufn_WyszukajWizytyDanejSpecjalizacjiDanegoPacjentaEkstra(101,N'dowolna');
 
 GO
 
 -- SCENARIUSZ DLA WIDOKU:
--- Dalej zajmujemy sie obsluga prywatnej kliniki. Jako zarzadzajacy klinika chcemy
--- poznac ilosci wizyt u lekarzy roznych specjalizacji aby dowiedziec sie jakich
--- lekarzy jakich specjalizacji potrzebujemy potencjalnie wiecej zatrudnic, zeby
--- zaspokoic popyt. W zwiazku z tym chcemy zwracac liste zawierajaca specjalizacje
--- lekarska i liczbe wizyt w tej specjalizacji. Dalej korzystamy z poprzedniej tabeli.
+-- Dalej zajmujemy się obsługą prywatnej kliniki. Jako zarządzający kliniką chcemy
+-- poznać ilości wizyt u lekarzy różnych specjalizacji, aby dowiedzieć się, jakich
+-- lekarzy jakich specjalizacji potrzebujemy potencjalnie więcej zatrudnić, żeby
+-- zaspokoić popyt. W związku z tym chcemy zwracać listę zawierającą specjalizację
+-- lekarską i liczbę wizyt w tej specjalizacji. Dalej korzystamy z poprzedniej tabeli.
 
--- Tabele z przykladowymi danymi mamy juz gotowa
+-- Tabelę z przykładowymi danymi mamy już gotową
 
--- Rozwiazanie dla scenariusza:
+-- Rozwiązanie dla scenariusza:
 
 CREATE VIEW Student_9.v_IlosciWizytWSpecjalizacjach AS
 SELECT 
@@ -348,22 +348,22 @@ GROUP BY w.SpecjalizacjaWizyty;
 
 GO
 
--- Wywolanie rozwiazania:
+-- Wywołanie rozwiązania:
 
 SELECT * FROM Student_9.v_IlosciWizytWSpecjalizacjach;
 
 GO
 
 -- SCENARIUSZ DLA FUNKCJI SKALARNEJ:
--- Dalej zajmujemy sie obsluga prywatnej kliniki, ale tym razem od strony recepcjonisty.
--- W zaleznosci od ilosci odbytych wizyt recepcjonista powinien naliczyc pacjentowi
--- rabat w roznej wysokosci. W swoim panelu recepcjonista zobaczy informacje jak duzy rabat
--- nalezy sie klientowi w danej chwili przy naliczaniu platnosci. Dalej korzystamy
+-- Dalej zajmujemy się obsługą prywatnej kliniki, ale tym razem od strony recepcjonisty.
+-- W zależności od ilości odbytych wizyt recepcjonista powinien naliczyć pacjentowi
+-- rabat w różnej wysokości. W swoim panelu recepcjonista zobaczy informację, jak duży rabat
+-- należy się klientowi w danej chwili przy naliczaniu płatności. Dalej korzystamy
 -- z poprzedniej tabeli.
 
--- Tabele z przykladowymi danymi mamy juz gotowa
+-- Tabelę z przykładowymi danymi mamy już gotową
 
--- Rozwiazanie dla scenariusza:
+-- Rozwiązanie dla scenariusza:
 
 CREATE FUNCTION Student_9.ufn_ObliczRabat
 (
@@ -396,7 +396,7 @@ END;
 
 GO
 
--- Wywolanie rozwiazania:
+-- Wywołanie rozwiązania:
 
 SELECT Student_9.ufn_ObliczRabat(101);
 
