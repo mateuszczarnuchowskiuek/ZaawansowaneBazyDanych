@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [M9_surname]
+    AUTHORIZATION [dbo];
+

@@ -78,6 +78,8 @@
     <Folder Include="Student_9\Tables\" />
     <Folder Include="Student_9\Views\" />
     <Folder Include="Student_9\Functions\" />
+    <Folder Include="M9_surname\" />
+    <Folder Include="M9_surname\User Defined Types\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\BuildVersion.sql" />
@@ -129,5 +131,8 @@
     <Build Include="Student_9\Functions\ufn_GetProductsWithHigherUpdatedPrice.sql" />
     <Build Include="Student_9\Functions\ufn_WyszukajWizytyDanejSpecjalizacjiDanegoPacjenta.sql" />
     <Build Include="Security\Student_9.sql" />
+    <None Include="Zadania\lab-5.sql" />
+    <Build Include="M9_surname\User Defined Types\Nazwisko.sql" />
+    <Build Include="Security\M9_surname.sql" />
   </ItemGroup>
 </Project>
